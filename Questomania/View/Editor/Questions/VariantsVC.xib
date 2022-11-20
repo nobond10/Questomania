@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VariantsVC" customModule="Questomania" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="2xI-5I-NEd" id="7q7-b3-qAd"/>
+                <outlet property="textView" destination="tWa-22-lHf" id="wgy-T3-3fg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст вопроса:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="das-5b-s38">
+                    <rect key="frame" x="20" y="79" width="353" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tWa-22-lHf">
+                    <rect key="frame" x="20" y="106" width="353" height="33"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2xI-5I-NEd">
+                    <rect key="frame" x="20" y="204" width="353" height="604"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xn-MJ-So7">
+                    <rect key="frame" x="83.666666666666686" y="159" width="226" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Добавить вариант ответа">
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="buttonAddVariantClicked:" destination="-1" eventType="touchUpInside" id="PLl-YF-PaK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="9xn-MJ-So7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3s1-Il-dFt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="das-5b-s38" secondAttribute="trailing" constant="20" id="6nd-2Z-hYs"/>
+                <constraint firstItem="tWa-22-lHf" firstAttribute="trailing" secondItem="das-5b-s38" secondAttribute="trailing" id="AzR-l1-MAN"/>
+                <constraint firstItem="2xI-5I-NEd" firstAttribute="top" secondItem="9xn-MJ-So7" secondAttribute="bottom" constant="10" id="EUh-fe-0vX"/>
+                <constraint firstItem="9xn-MJ-So7" firstAttribute="top" secondItem="tWa-22-lHf" secondAttribute="bottom" constant="20" id="FsC-nF-gNS"/>
+                <constraint firstItem="2xI-5I-NEd" firstAttribute="leading" secondItem="tWa-22-lHf" secondAttribute="leading" id="JoK-i0-JSW"/>
+                <constraint firstItem="2xI-5I-NEd" firstAttribute="trailing" secondItem="tWa-22-lHf" secondAttribute="trailing" id="YKD-u0-IPq"/>
+                <constraint firstItem="das-5b-s38" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="cVH-6D-QTa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2xI-5I-NEd" secondAttribute="bottom" constant="10" id="eRd-yh-Rho"/>
+                <constraint firstItem="tWa-22-lHf" firstAttribute="leading" secondItem="das-5b-s38" secondAttribute="leading" id="g98-Q7-Ndc"/>
+                <constraint firstItem="das-5b-s38" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="nee-ec-RXJ"/>
+                <constraint firstItem="tWa-22-lHf" firstAttribute="top" secondItem="das-5b-s38" secondAttribute="bottom" constant="10" id="pwF-F5-lJJ"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-1.4084507042253522"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
